@@ -1,24 +1,12 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const buttons = document.querySelectorAll('.btn');
-  const stopButton = document.querySelector('.stop');
-  const audios = document.querySelectorAll('audio');
+function playSound(soundName) {
+    var audio = new Audio('sounds/' + soundName);
+    audio.play();
+}
 
-  buttons.forEach(button => {
-    button.addEventListener('click', () => {
-      const soundId = button.dataset.sound;
-      const audio = document.getElementById(soundId);
-      if (audio) {
-        audio.currentTime = 0;
-        audio.play();
-      }
-    });
-  });
-
-  stopButton.addEventListener('click', () => {
-    audios.forEach(audio => {
-      audio.pause();
-      audio.currentTime = 0;
-    });
-  });
-});
-
+function stopAllSounds() {
+    var sounds = document.getElementsByTagName('audio');
+    for (var i = 0; i < sounds.length; i++) {
+        sounds[i].pause();
+        sounds[i].currentTime = 0;
+    }
+}
