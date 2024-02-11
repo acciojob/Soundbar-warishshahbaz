@@ -1,23 +1,21 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-}
-
 #buttons {
-    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .btn {
     margin: 10px;
     padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #4CAF50;
+    background-color: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .stop {
-    background-color: #f44336;
+    margin-top: 20px;
+    background-color: #dc3545;
 }
