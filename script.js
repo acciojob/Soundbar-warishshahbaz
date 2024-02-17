@@ -1,9 +1,12 @@
+var playingSounds = []; // Array to store currently playing sounds
+
 function playSound(soundName) {
-    var audio = new Audio(`${soundName}`);
+    var audio = new Audio(soundName);
     audio.play();
+    playingSounds.push(audio); // Add the audio element to the array of playing sounds
 }
 
 function stopAllSounds() {
-    var sounds = document.querySelectorAll('.btn');
-    sounds.forEach(sound => sound.pause());
+    playingSounds.forEach(sound => sound.pause());
+    playingSounds = []; // Clear the array of playing sounds
 }
