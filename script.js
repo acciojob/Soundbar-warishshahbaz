@@ -1,9 +1,9 @@
 function playSound(soundName) {
-    var audio = new Audio(`sounds/${soundName}.mp3`);
+    var audio = new Audio(`${soundName}`);
     audio.play();
 }
 
 function stopAllSounds() {
-    var sounds = document.querySelectorAll('audio');
+    var sounds = document.querySelectorAll('.btn');
     sounds.forEach(sound => sound.pause());
 }
